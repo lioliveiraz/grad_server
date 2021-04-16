@@ -2,5 +2,7 @@
   ID = "grad_server"
 
 [build]
-   command = "npm start"
    functions = "functions"
+   
+[dev]
+  publish = "dist"
