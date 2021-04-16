@@ -4,7 +4,6 @@ const { authRouter, newUser, addScore, getScoreFromUser, getEmployeesFromUserDB,
 const helpers = require('./src/helpers');
 const { verifyToken } = helpers;
 
-
 const server = jsonServer.create();
 const router = jsonServer.router('./src/db.json');
 server.use(jsonServer.defaults());
