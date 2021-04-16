@@ -1,0 +1,6 @@
+[Settings]
+  ID = "grad_server"
+
+[build]
+  publish = "dist/"
+  command = "npm start"
