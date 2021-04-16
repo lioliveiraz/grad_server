@@ -42,3 +42,7 @@ server.use(/^(?!\/auth).*$/, async (req, res, next) => {
 });
 
 server.use(router);
+
+server.listen(4020, () => {
+    console.log('Run Auth API Server');
+});
