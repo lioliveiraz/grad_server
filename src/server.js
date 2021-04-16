@@ -2,12 +2,12 @@ const bodyParser = require('body-parser');
 const jsonServer = require('json-server');
 const { authRouter, newUser, addScore, getScoreFromUser, getEmployeesFromUserDB, addCourse } = require('./router/router');
 const helpers = require('./helpers');
-
+const serverless = require("serverless-http")
 const { verifyToken } = helpers;
 
 
 const server = jsonServer.create();
-const router = jsonServer.router('./mock_server/db.json');
+const router = jsonServer.router('./db.json');
 server.use(jsonServer.defaults());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
@@ -45,6 +45,4 @@ server.use(/^(?!\/auth).*$/, async (req, res, next) => {
 
 server.use(router);
 
-server.listen(4020, () => {
-    console.log('Run Auth API Server');
-});
+module.exports.handler=serverless(server)

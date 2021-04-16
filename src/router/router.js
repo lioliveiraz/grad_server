@@ -2,8 +2,8 @@ const helpers = require('../helpers');
 const { createToken, isAuthenticated, isUserRegistered, findUser } = helpers;
 const fs = require('fs');
 const bcrypt = require("bcrypt");
-const userDb = JSON.parse(fs.readFileSync('./mock_server/user.json', 'utf-8'));
-const coursesDb = JSON.parse(fs.readFileSync('./mock_server/db.json', 'utf-8'));
+const userDb = JSON.parse(fs.readFileSync('./user.json', 'utf-8'));
+const coursesDb = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
 
 module.exports = {
     authRouter: async (req, res) => {
@@ -29,7 +29,7 @@ module.exports = {
             return;
         }
 
-        fs.readFile("./mock_server/user.json", (err, fileData) => {
+        fs.readFile("./user.json", (err, fileData) => {
             err && res.status(401).json({ message: err });
             const parsedData = JSON.parse(fileData.toString());
             const last_id = parsedData.users[parsedData.users.length - 1].id;
@@ -39,7 +39,7 @@ module.exports = {
             };
 
             parsedData.users.push(user);
-            fs.writeFile("./mock_server/user.json", JSON.stringify(parsedData), (err, result) => {
+            fs.writeFile("./user.json", JSON.stringify(parsedData), (err, result) => {
                 err && res.status(401).json({ message: err });
 
                 res.status(200).json({ message: "Your user was created" });
@@ -55,7 +55,7 @@ module.exports = {
         user = user[0];
         user['assessments_score'] = [...user['assessments_score'], { code: userData.code, score: userData.score }];
 
-        fs.writeFile("./mock_server/user.json", JSON.stringify(userDb), (err, result) => {
+        fs.writeFile("./user.json", JSON.stringify(userDb), (err, result) => {
             err && res.status(401).json({ message: err });
             res.status(200).json({ message: "Your score was added" });
             return;
@@ -68,7 +68,7 @@ module.exports = {
         const last_id = coursesDb.courses[coursesDb.courses.length - 1].id;
         coursesDb.courses.push({ id: last_id + 1, ...data });
 
-        fs.writeFile("./mock_server/db.json", JSON.stringify(coursesDb), (err, result) => {
+        fs.writeFile("./db.json", JSON.stringify(coursesDb), (err, result) => {
             err && res.status(401).json({ message: err });
             res.status(200).json({ message: "Your course was addeded" });
             return;
