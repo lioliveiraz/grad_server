@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const bcrypt = require("bcrypt");
 
-const userDb = JSON.parse(fs.readFileSync('./user.json', 'utf-8'));
+const userDb = JSON.parse(fs.readFileSync('./src/user.json', 'utf-8'));
 const SECRET_KEY = "123456";
 const expiresIn = '10h';
 

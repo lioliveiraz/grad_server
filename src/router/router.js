@@ -2,8 +2,8 @@ const helpers = require('../helpers');
 const { createToken, isAuthenticated, isUserRegistered, findUser } = helpers;
 const fs = require('fs');
 const bcrypt = require("bcrypt");
-const userDb = JSON.parse(fs.readFileSync('./user.json', 'utf-8'));
-const coursesDb = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
+const userDb = JSON.parse(fs.readFileSync('./src/user.json', 'utf-8'));
+const coursesDb = JSON.parse(fs.readFileSync('./src/db.json', 'utf-8'));
 
 module.exports = {
     authRouter: async (req, res) => {
