@@ -12,7 +12,8 @@ module.exports = {
         if (!isAuth) {
             const status = 401;
             const message = 'Incorrect empId or password';
-            res.status(status).json({ message });
+           res.status(status).json({ message });
+
             return;
         }
         const userObject = findUser(empId);
@@ -29,7 +30,7 @@ module.exports = {
             return;
         }
 
-        fs.readFile("./user.json", (err, fileData) => {
+        fs.readFile("./src/user.json", (err, fileData) => {
             err && res.status(401).json({ message: err });
             const parsedData = JSON.parse(fileData.toString());
             const last_id = parsedData.users[parsedData.users.length - 1].id;
@@ -39,7 +40,7 @@ module.exports = {
             };
 
             parsedData.users.push(user);
-            fs.writeFile("./user.json", JSON.stringify(parsedData), (err, result) => {
+            fs.writeFile("./src/user.json", JSON.stringify(parsedData), (err, result) => {
                 err && res.status(401).json({ message: err });
 
                 res.status(200).json({ message: "Your user was created" });
@@ -55,7 +56,7 @@ module.exports = {
         user = user[0];
         user['assessments_score'] = [...user['assessments_score'], { code: userData.code, score: userData.score }];
 
-        fs.writeFile("./user.json", JSON.stringify(userDb), (err, result) => {
+        fs.writeFile("./src/user.json", JSON.stringify(userDb), (err, result) => {
             err && res.status(401).json({ message: err });
             res.status(200).json({ message: "Your score was added" });
             return;
@@ -68,7 +69,7 @@ module.exports = {
         const last_id = coursesDb.courses[coursesDb.courses.length - 1].id;
         coursesDb.courses.push({ id: last_id + 1, ...data });
 
-        fs.writeFile("./db.json", JSON.stringify(coursesDb), (err, result) => {
+        fs.writeFile("./src/db.json", JSON.stringify(coursesDb), (err, result) => {
             err && res.status(401).json({ message: err });
             res.status(200).json({ message: "Your course was addeded" });
             return;
