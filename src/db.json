@@ -1,1 +1,85 @@
-{"courses":[{"id":1,"week":1,"course_code":"6666666","course_name":"Java Script Bootcamp","assessment":false,"source":"udemy","duration":44,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":2,"week":2,"course_code":"555555","course_name":"React  Bootcamp","assessment":false,"source":"udemy","duration":6,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":3,"week":2,"course_code":"111111","course_name":"Vue Bootcamp","assessment":false,"source":"udemy","duration":3,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":4,"week":3,"course_code":"222222","course_name":"Vue","assessment":true,"source":"plural sight","duration":2,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":5,"week":4,"course_code":"333333","course_name":"React","assessment":true,"source":"plural sight","duration":2,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":6,"week":5,"course_code":"4444444","course_name":"Angular","assessment":true,"source":"plural sight","duration":2,"link":"https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"},{"id":7}]}
+{
+    "courses": [
+        {
+            "id": 1,
+            "week": 1,
+            "course_code": "113687",
+            "course_name": "JavaScript Bootcamp",
+            "assessment": false,
+            "source": "udemy",
+            "duration": 20,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 2,
+            "week": 2,
+            "course_code": "876453",
+            "course_name": "React  Bootcamp",
+            "assessment": false,
+            "source": "udemy",
+            "duration": 6,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 3,
+            "week": 3,
+            "course_code": "978534",
+            "course_name": "Vue Bootcamp",
+            "assessment": false,
+            "source": "udemy",
+            "duration": 13,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 4,
+            "week": 3,
+            "course_code": "973456",
+            "course_name": "Vue",
+            "assessment": true,
+            "source": "plural sight",
+            "duration": 2,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 5,
+            "week": 2,
+            "course_code": "879756",
+            "course_name": "React",
+            "assessment": true,
+            "source": "plural sight",
+            "duration": 2,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 6,
+            "week": 4,
+            "course_code": "446852",
+            "course_name": "Angular",
+            "assessment": true,
+            "source": "plural sight",
+            "duration": 2,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        },
+        {
+            "id": 7,
+            "week": 1,
+            "course_code": "113456",
+            "course_name": "JavaScript",
+            "assessment": true,
+            "source": "plural sight",
+            "duration": 2,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        }
+        ,
+        {
+            "id": 8,
+            "week": 4,
+            "course_code": "443664",
+            "course_name": "Angular Bootcamp",
+            "assessment": false,
+            "source": "Udemy",
+            "duration": 10,
+            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
+        }
+    ]
+}
