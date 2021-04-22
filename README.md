@@ -9,7 +9,7 @@ $ git clone
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:4020
 $ npm start
 
 ```
@@ -20,7 +20,7 @@ The API was built using `json-server` dependency. Using this tool, you can mock 
 
 <ul>
 
-<li><b>bycript</b>: to hash the passwords</li>
+<li><b>bcrypt</b>: to hash the passwords</li>
 <li><b>nodemon</b>: to run the server-side continuously </li>
 <li><b>json-server</b>: to mock an API and database</li>
 </ul>
@@ -62,6 +62,6 @@ The server gets the client's token and verifies if the user is authenticated for
         });
 
 ```
-In the helper folder, you will find the authentication helpers, and there is used **JWT** and **bycript**.  
+In the helper folder, you will find the authentication helpers, and there is used **JWT** and **bcrypt**.  
 
 
