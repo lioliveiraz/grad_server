@@ -1,15 +1,6 @@
 {
     "courses": [
-        {
-            "id": 1,
-            "week": 1,
-            "course_code": "113687",
-            "course_name": "JavaScript Bootcamp",
-            "assessment": false,
-            "source": "udemy",
-            "duration": 20,
-            "link": "https://giphy.com/gifs/makespace-cat-yoga-xUPGcyi4YxcZp8dWZq/tile"
-        },
+
         {
             "id": 2,
             "week": 2,
